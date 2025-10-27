@@ -1,0 +1,329 @@
+:root{
+  --accent-blue: #003366;         /* HEX */
+  --soft-blue: rgb(230,242,255);  /* RGB */
+  --bright: hsl(205, 90%, 55%);    /* HSL */
+  --text-dark: #333333;
+}
+
+body{
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background-color: var(--soft-blue); 
+    color: var(--text-dark);
+    margin: 0;
+    line-height: 1.4;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+header{
+    position: absolute;   /* Абсолютне позиціонування */
+    top: 0;               /* 0 відступ зверху */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    padding: 18px 10px;
+    background: var(--soft-blue);
+    z-index: 1000;         
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+header h1{
+    color: var(--accent-blue);
+    margin: 0 0 6px 0;
+    font-size: 1.9rem;
+}
+
+header img{
+    width: 220px;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    vertical-align: middle;
+}
+
+header img:hover{
+    transform: scale(1.05);
+}
+
+nav {
+    margin-top: 120px;
+    text-align: center;
+    padding: 8px 0;
+    display: flex; 
+    justify-content: center;
+    gap: 10px; 
+}
+
+.nav-button {
+    color:#ffffff;
+    background-color: var(--accent-blue);
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.nav-button:hover{
+    background-color:var(--bright);
+}
+
+/* =================== СТОРІНКА "Головна" =================== */
+article{
+    margin: 40px 24px;  /* зовнішні відступи зверху/знизу та з боків */
+    padding: 0;       /* немає внутрішніх відступів */
+    background: rgba(230,242,255,0.6);
+    border-left: 4px solid var(--bright);
+    border-right: 4px solid var(--bright);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: auto;   
+    max-height: 260px;  
+    box-sizing: border-box;
+}
+
+article h2 { 
+    color: var(--accent-blue); 
+    margin: 10px 16px; /* зовнішні відступи заголовка */
+}
+article p { 
+    color: var(--text-dark); 
+    margin: 0 16px 12px 16px; /* зовнішні відступи параграфа */
+}
+
+ol {
+    margin: 10px 40px;  /* зовнішні відступи списку */
+    padding-left: 24px; /* відступ для маркерів списку */
+}
+ol li {
+    list-style-position: inside;
+    background: white;
+    margin-bottom: 10px;
+    padding: 8px 12px;    
+    border-radius: 6px;
+    transition: background-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+ol li:hover{
+    background-color: #e8f3ff; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12); /* тінь від рамки */
+    transform: translateY(-4px) rotate(-0.5deg); /* 2D трансформація */
+    color: #002244;
+}
+
+table {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 18px auto;
+    transition: transform 0.25s ease;
+}
+table:hover { transform: scale(1.05); } /* масштаб на 5% */
+
+th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: left;
+}
+
+h2 + hr { border-color: var(--accent-blue); }
+
+aside ul li {
+    float: left;           
+    margin-right: 25px;
+}
+
+#contacts p {
+    margin: 6px 16px;
+    transition: text-shadow 0.3s ease 2s; /* тривалість 0.3s + затримка 2s */
+}
+
+#contacts p:hover {
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.7);
+}
+
+
+a[target] { font-weight: 600; }
+
+/* =================== СТОРІНКА "Напрями діяльності" =================== */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #e6f0ff;
+    text-align: center;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.fixed-header h1 {
+    font-size: 1.4rem; /* трохи зменшено розмір тексту */
+    margin-bottom: 4px; /* відступ під назвою */
+}
+
+.fixed-header img {
+    width: 180px; /* трохи зменшено логотип */
+    margin-bottom: 6px; /* відступ між лого і навігацією */
+}
+
+.fixed-header nav {
+    margin-top: 0;           /* прибираємо великий відступ зверху */
+    padding: 4px 0;          /* можна додати невеликий padding */
+}
+
+.direction-card {
+    position: relative;
+    border-left: 3px double #d2691e;
+    border-top: 3px double #d2691e;
+    border-bottom: 3px double #d2691e;
+    border-right: 4px solid #d2691e; /* права межа суцільна */ 
+    padding: 12px;
+    margin: 12px auto;
+    max-width: 1000px;
+    background: #fff8f2;
+}
+
+.direction-card img {
+    transition: filter 0.4s ease;
+}
+.direction-card img:focus,
+.direction-card img:focus-visible,
+.direction-card img:hover {
+    filter: saturate(200%); /* зростання насиченості 200% */
+}
+
+.gov-text {
+    font-weight: 300;        /* легший шрифт */
+    font-style: italic;      /* похилий */
+    font-size: 0.9rem;       /* трохи менший за основний текст */
+    line-height: 1.2;        
+    color: #555;           
+}
+
+a:active { color: darkgreen }
+
+/* =================== СТОРІНКА "Зворотній зв'язок" =================== */
+.feedback-section {
+    max-width: 800px;
+    margin: 30px auto 40px auto;
+    padding: 30px 40px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    animation: floatIn 0.6s ease both;
+}
+
+@keyframes floatIn {
+    0% {
+        opacity: 0;              /* невидимий на початку */
+        transform: translateY(40px); /* трохи знизу піднімається вгору */
+    }
+    100% {
+        opacity: 1;              /* повністю видно */
+        transform: translateY(0); /* повернення у звичайне положення */
+    }
+}
+.feedback-section h2 {
+    text-align: center;
+    color: var(--accent-blue);
+    margin-bottom: 5px;
+}
+
+/* Сама форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Поля вводу */
+fieldset {
+    border: 2px solid var(--accent-blue);
+    border-radius: 10px;
+    padding: 10px 15px;
+    background: var(--soft-blue);
+}
+
+legend {
+    color: var(--accent-blue);
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+/* Текстові поля, email, select, textarea */
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 4px 0 4px 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Фокус на полях */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 6px rgba(0, 51, 102, 0.3);
+    outline: none;
+}
+
+/* Чекбокс */
+.consent {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Кнопки */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background: var(--accent-blue);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+input[type="reset"] {
+    background: #888;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    transform: translateY(-2px);
+    background: var(--bright);
+}
+
+.direction-card { animation: floatIn 0.6s ease both; }
+
+footer { 
+    margin-top: 20px; text-align: center; padding: 16px 0; background: transparent; 
+    background-color: #002244;
+    color: #ffffff;
+}
+
+.fixed-header + main {
+    margin-top: 180px;
+}

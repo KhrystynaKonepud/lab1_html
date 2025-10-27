@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevStream - Головна сторінка</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+    a[href*="alcor"] {
+        text-decoration: underline;
+    }
+    article::after {
+        content: " 👨‍💼";
+        margin-left: 8px;
+        font-size: 1.2em;
+    }
+    body {
+    margin: 0;
+    padding-top: 220px; 
+    background-color: #f0f8ff;
+    color: #333333;
+    line-height: 1.6;
+    }
+    </style>
+
 </head>
 
 <body>
@@ -16,16 +35,17 @@
 
     <nav>
         <center>
-            <a href="main.html">Головна</a> |
-            <a href="directions.html">Напрями діяльності</a> |
-            <a href="feedback.html">Зворотній зв’язок</a> |
-            <a href="#contacts">Контакти</a>
+            <a href="main.html" class="nav-button">Головна</a> 
+            <a href="directions.html" class="nav-button">Напрями діяльності</a> 
+            <a href="feedback.html" class="nav-button">Зворотній зв’язок</a> 
+            <a href="#contacts" class="nav-button">Контакти</a>
         </center>
     </nav>
     <hr>
     
     <article>
         <h2>Мета створення корпорації</h2>
+        <hr>
         <p>
             <i><b>DevStream</i></b> — це сучасна IT-корпорація, що об’єднує талановитих фахівців у сфері 
             інформаційних технологій. Основна мета компанії — створення якісних програмних 
