@@ -54,7 +54,7 @@ function addActivity(newActivity, arr) {
 // Нові напрями
 addActivity({
   id: 5.5,
-  name: "Новий напрям тест 1",
+  name: "",
   department: "Тестовий",
   govRelation: "Міністерство тестів",
   usersDay1: 80,
@@ -151,7 +151,7 @@ console.log(`2.1. Користувачі за березень у робочий
 
 // 2.2 Середній вік користувачів
 const avgAge = users.reduce((sum, u) => sum + u.age, 0) / users.length;
-console.log("2.2. Середній вік користувачів:", avgAge.toFixed(1));
+console.log("2.2. Середній вік користувачів:", avgAge.toFixed(0));
 
 // 2.3 Поділ користувачів на класи
 let middleWorking = 0, oldNonWorking = 0, others = 0;

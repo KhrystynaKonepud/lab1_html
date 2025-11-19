@@ -33,6 +33,7 @@ header h1{
     color: var(--accent-blue);
     margin: 0 0 6px 0;
     font-size: 1.9rem;
+    font-weight: 600;
 }
 
 header img{
@@ -46,12 +47,12 @@ header img:hover{
 }
 
 nav {
-    margin-top: 120px;
+    margin-top: 200px;
     text-align: center;
     padding: 8px 0;
-    display: flex; 
+    display: flex;
     justify-content: center;
-    gap: 10px; 
+    gap: 10px;
 }
 
 .nav-button {
@@ -180,7 +181,7 @@ a[target] { font-weight: 600; }
     border-left: 3px double #d2691e;
     border-top: 3px double #d2691e;
     border-bottom: 3px double #d2691e;
-    border-right: 4px solid #d2691e; /* права межа суцільна */ 
+    border-right: 4px solid #d2691e; /* права межа суцільна */
     padding: 12px;
     margin: 12px auto;
     max-width: 1000px;
@@ -324,6 +325,7 @@ footer {
     color: #ffffff;
 }
 
-.fixed-header + main {
+.fixed-header ~ main {
     margin-top: 180px;
+    padding-top: 80px;
 }
