@@ -22,54 +22,76 @@
     <hr>
 
     <main>
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Закон України «Про авторське право і суміжні права»", "Закон України «Про охорону прав на винаходи і корисні моделі»", "Закон України «Про інформацію»"]'>
             <b>Розробка програмного забезпечення</b><br>
             <img src="images/software_engineering.jpg" alt="Розробка ПЗ" width="250" tabindex="0"><br>
             Ми створюємо сучасні веб та мобільні застосунки для бізнесу будь-якого рівня.<br>
             <span class="gov-text">Співпраця з Міністерством цифрової трансформації України.</span>
         </div><br>
 
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Закон України «Про зайнятість населення»", "Кодекс законів про працю України", "Закон України «Про міжнародне приватне право»"]'>
             <b>Аутсорсинг IT-послуг</b><br>
             <img src="images/outsoursing.jfif" alt="Аутсорсинг" width="250" tabindex="0"><br>
             Ми забезпечуємо компанії за кордоном висококваліфікованими IT-фахівцями.<br>
             <span class="gov-text">Співпраця з Державною службою зайнятості.</span>
         </div><br>
 
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Кодекс законів про працю України, ст. 21", "Закон України «Про зайнятість населення»", "Закон України «Про оплату праці»"]'>
             <b>Аутстафінг персоналу</b><br>
             <img src="images/autstaffing.jpg" alt="Аутстафінг" width="250" tabindex="0"><br>
             Забезпечення клієнтів професійними розробниками без розширення штату.<br>
             <span class="gov-text">Співпраця з Міністерством економіки України.</span>
         </div><br>
 
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Закон України «Про освіту»", "Закон України «Про вищу освіту»", "Закон України «Про професійну освіту»"]'>
             <b>Навчання та підвищення кваліфікації</b><br>
             <img src="images/job-training.jpg" alt="Навчання" width="250" tabindex="0"><br>
             Організовуємо тренінги, курси та IT-академію для молодих спеціалістів.<br>
             <span class="gov-text">Співпраця з Міністерством освіти і науки України.</span>
         </div><br>
 
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Закон України «Про основні засади кібербезпеки України»", "Закон України «Про захист інформації»", "Закон України «Про захист персональних даних»"]'>
             <b>Кібербезпека</b><br>
             <img src="images/cyber-security.jpg" alt="Кібербезпека" width="250" tabindex="0"><br>
             Розробка рішень для захисту даних і кіберінфраструктури клієнтів.<br>
-            <span class="gov-text">Співпраця з Державною службою спеціального зв’язку та захисту інформації України.</span>
+            <span class="gov-text">Співпраця з Державною службою спеціального зв'язку та захисту інформації України.</span>
         </div><br>
 
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Закон України «Про електронні комунікації»", "Закон України «Про захист інформації»", "GDPR (General Data Protection Regulation)"]'>
             <b>Хмарні технології</b><br>
             <img src="images/cloud-technologies.jpg" alt="Хмарні технології" width="250" tabindex="0"><br>
             Впроваджуємо хмарні сервіси для зручного зберігання і обробки даних.<br>
             <span class="gov-text">Співпраця з Міністерством цифрової трансформації України.</span>
         </div><br>
 
-        <div class="direction-card">
+        <div class="direction-card" data-laws='["Закон України «Про захист персональних даних»", "Закон України «Про інформацію»", "Етичні принципи використання ШІ (UNESCO)"]'>
             <b>Штучний інтелект та аналітика даних</b><br>
             <img src="images/ai-assistant.png" alt="ШІ" width="250" tabindex="0"><br>
             Розробляємо моделі машинного навчання для бізнес-аналітики та прогнозування.<br>
             <span class="gov-text">Співпраця з науковими установами України.</span>
         </div>
     </main>
+
+    <!-- Модальне вікно попередження -->
+    <div id="warningModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h3 class="modal-title">Попередження</h3>
+            <p class="modal-text">
+                <strong>Увага!</strong> У зв'язку з військовим станом в Україні, деякі напрями діяльності можуть мати обмеження. Інформація про співпрацю з державними установами може бути конфіденційною. Будь ласка, підтвердіть, що ви розумієте та приймаєте ці умови.
+            </p>
+            <div class="modal-checkbox-container">
+                <label class="modal-checkbox-label">
+                    <input type="checkbox" id="modalConfirm" class="modal-checkbox">
+                    <span>Я розумію та приймаю умови</span>
+                </label>
+            </div>
+            <div class="modal-btn-container">
+                <button id="modalClose" class="modal-btn">Закрити</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Шаблон для заголовка фліп-карт -->
+    <span id="flip-back-title" style="display: none;">Законодавство</span>
 </body>
 </html>
