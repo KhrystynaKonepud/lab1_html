@@ -1,19 +1,20 @@
 import { useState } from 'react';
 import { Modal as BootstrapModal, Button, Form } from 'react-bootstrap';
 
+
 export default function Modal({ isOpen, onClose }) {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
     <BootstrapModal show={isOpen} onHide={onClose} centered>
-      <BootstrapModal.Header closeButton style={{ borderBottom: '3px solid #d2691e' }}>
-        <BootstrapModal.Title className="text-center w-100" style={{ color: '#d2691e' }}>
+      <BootstrapModal.Header closeButton className="modal-header-custom">
+        <BootstrapModal.Title className="text-center w-100 modal-title-custom">
           Попередження
         </BootstrapModal.Title>
       </BootstrapModal.Header>
 
       <BootstrapModal.Body>
-        <p style={{ lineHeight: 1.6, fontSize: '1.05rem', textAlign: 'justify' }}>
+        <p className="modal-text">
           <strong>Увага!</strong> У зв'язку з військовим станом в Україні, деякі напрями діяльності можуть мати обмеження.
           Інформація про співпрацю з державними установами може бути конфіденційною.
           Будь ласка, підтвердіть, що ви розумієте та приймаєте ці умови.
@@ -30,11 +31,7 @@ export default function Modal({ isOpen, onClose }) {
       </BootstrapModal.Body>
 
       <BootstrapModal.Footer className="justify-content-center">
-        <Button
-          variant="primary"
-          onClick={onClose}
-          style={{ backgroundColor: '#003366' }}
-        >
+        <Button variant="primary" onClick={onClose} className="modal-btn">
           Закрити
         </Button>
       </BootstrapModal.Footer>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import Tooltip from '../components/Tooltip';
 
+
 export default function FeedbackPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -52,29 +53,17 @@ export default function FeedbackPage() {
 
   return (
     <Container className="text-center py-4">
-      <img
-        src="/images/logowithnoback.png"
-        alt="Логотип DevStream"
-        className="img-fluid mb-3"
-        style={{ width: '180px' }}
-      />
-      <h2 style={{ color: 'var(--accent-blue)' }} className="mb-4">
+      <h2 className="mb-4 feedback-title">
         Форма зворотнього зв'язку
       </h2>
 
-      <section
-        className="mx-auto p-4 bg-white rounded shadow float-in"
-        style={{ maxWidth: '800px' }}
-      >
+      <section className="mx-auto p-4 bg-white rounded shadow float-in feedback-section">
         <hr />
         <Form noValidate validated={validated} onSubmit={handleSubmit} onReset={handleReset}>
 
           {/* Персональна інформація */}
-          <fieldset className="border border-2 rounded p-3 mb-3" style={{
-            borderColor: 'var(--accent-blue)',
-            backgroundColor: 'var(--soft-blue)'
-          }}>
-            <legend className="fw-bold px-2" style={{ color: 'var(--accent-blue)', width: 'auto' }}>
+          <fieldset className="border border-2 rounded p-3 mb-3 fieldset-personal">
+            <legend className="fw-bold px-2 fieldset-legend">
               Персональна інформація
             </legend>
 

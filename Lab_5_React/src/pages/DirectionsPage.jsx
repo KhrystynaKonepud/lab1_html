@@ -4,13 +4,16 @@ import DirectionCard from '../components/DirectionCard';
 import Modal from '../components/Modal';
 import { useDirections } from '../hooks/useDirections';
 
+
 export default function DirectionsPage() {
   const { directions, loading } = useDirections();
   const [modalOpen, setModalOpen] = useState(false);
   const [shownModals, setShownModals] = useState({});
+  const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleCardHover = (cardId) => {
     if (!shownModals[cardId]) {
+      setScrollPosition(window.scrollY);
       setModalOpen(true);
       setShownModals(prev => ({ ...prev, [cardId]: true }));
     }
@@ -18,6 +21,9 @@ export default function DirectionsPage() {
 
   const handleCloseModal = () => {
     setModalOpen(false);
+    setTimeout(() => {
+      window.scrollTo(0, scrollPosition);
+    }, 0);
   };
 
   if (loading) {
