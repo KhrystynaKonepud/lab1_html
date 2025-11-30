@@ -5,8 +5,6 @@ export const useDirections = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Симуляція завантаження даних
-    // У майбутньому тут може бути fetch('/api/directions')
     const loadDirections = () => {
       const data = [
         {

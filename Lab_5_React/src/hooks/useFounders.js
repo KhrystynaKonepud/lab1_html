@@ -5,8 +5,6 @@ export const useFounders = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Симуляція завантаження даних
-    // У майбутньому тут може бути fetch('/api/founders')
     const loadFounders = () => {
       const data = [
         {

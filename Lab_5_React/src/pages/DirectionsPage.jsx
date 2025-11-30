@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Container, Spinner } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import DirectionCard from '../components/DirectionCard';
 import Modal from '../components/Modal';
 import { useDirections } from '../hooks/useDirections';
@@ -25,15 +25,6 @@ export default function DirectionsPage() {
     }, 0);
   };
 
-  if (loading) {
-    return (
-      <Container className="text-center mt-5 pt-5">
-        <Spinner animation="border" variant="primary" role="status">
-          <span className="visually-hidden">Завантаження...</span>
-        </Spinner>
-      </Container>
-    );
-  }
 
   return (
     <>

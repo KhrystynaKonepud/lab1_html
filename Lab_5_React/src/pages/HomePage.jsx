@@ -1,18 +1,8 @@
-import { Container, Table, Spinner } from 'react-bootstrap';
+import { Container, Table} from 'react-bootstrap';
 import { useFounders } from '../hooks/useFounders';
 
 export default function HomePage() {
-  const { founders, loading } = useFounders();
-
-  if (loading) {
-    return (
-      <Container className="text-center mt-5">
-        <Spinner animation="border" variant="primary" role="status">
-          <span className="visually-hidden">Завантаження...</span>
-        </Spinner>
-      </Container>
-    );
-  }
+  const { founders } = useFounders();
 
   return (
     <Container as="main" className="my-4">
