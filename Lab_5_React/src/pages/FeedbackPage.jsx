@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import Tooltip from '../components/Tooltip';
 
-
 export default function FeedbackPage() {
   const [formData, setFormData] = useState({
     name: '',

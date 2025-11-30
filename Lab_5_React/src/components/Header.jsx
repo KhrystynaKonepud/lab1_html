@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import TypeWriter from './TypeWriter';
 
-
 export default function Header({ showAnnouncement = false }) {
   return (
     <>

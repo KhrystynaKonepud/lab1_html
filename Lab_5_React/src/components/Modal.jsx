@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Modal as BootstrapModal, Button, Form } from 'react-bootstrap';
 
-
 export default function Modal({ isOpen, onClose }) {
   const [isChecked, setIsChecked] = useState(false);
 

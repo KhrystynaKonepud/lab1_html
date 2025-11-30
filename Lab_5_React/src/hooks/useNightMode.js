@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 
-
 export const useNightMode = () => {
   useEffect(() => {
     const applyNightMode = () => {

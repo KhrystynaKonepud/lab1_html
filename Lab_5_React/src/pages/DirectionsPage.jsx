@@ -4,7 +4,6 @@ import DirectionCard from '../components/DirectionCard';
 import Modal from '../components/Modal';
 import { useDirections } from '../hooks/useDirections';
 
-
 export default function DirectionsPage() {
   const { directions, loading } = useDirections();
   const [modalOpen, setModalOpen] = useState(false);

@@ -1,7 +1,6 @@
 import { Card } from 'react-bootstrap';
 import FlipCard from './FlipCard';
 
-
 export default function DirectionCard({ title, image, description, govInfo, laws, onMouseEnter }) {
   return (
     <Card className="mb-3 mx-auto float-in direction-card" onMouseEnter={onMouseEnter}>

@@ -6,7 +6,6 @@ import DirectionsPage from './pages/DirectionsPage';
 import FeedbackPage from './pages/FeedbackPage';
 import { useNightMode } from './hooks/useNightMode';
 
-
 function AppContent() {
   const location = useLocation();
   useNightMode();

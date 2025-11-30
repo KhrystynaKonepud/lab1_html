@@ -1,7 +1,6 @@
 import { Container, Table, Spinner } from 'react-bootstrap';
 import { useFounders } from '../hooks/useFounders';
 
-
 export default function HomePage() {
   const { founders, loading } = useFounders();
 

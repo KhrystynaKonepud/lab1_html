@@ -1,7 +1,6 @@
 /* Bootstrap CSS */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 /* Кастомні кольори для проекту */
 :root {
   --soft-blue: #e6f2ff;
