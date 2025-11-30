@@ -20,9 +20,18 @@ body {
   min-height: 100vh;
 }
 
-/* Night mode - всі кольори на 40% темніші */
-body.night-mode {
-  filter: brightness(0.6);
+/* Night mode - всі фонові кольори на 40% темніші */
+body.night-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: multiply;
 }
 
 /* Flip card анімація */
